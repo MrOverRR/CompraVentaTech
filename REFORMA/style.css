@@ -18,6 +18,8 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    width: 20%;
+    height: 20%;
 }
 
 /* Estilo para el menú de navegación */
@@ -38,7 +40,7 @@ nav ul li a {
 
 /* Botón de CTA en el encabezado */
 .cta-header {
-    background-color: #ff9800;
+    background-color: #854422;
     color: white;
     padding: 10px 20px;
     text-transform: uppercase;
@@ -62,7 +64,7 @@ nav ul li a {
 }
 
 .highlight .cta-highlight {
-    background-color: #4CAF50;
+    background-color: #854422;
     color: white;
     padding: 10px 20px;
     text-transform: uppercase;
@@ -102,6 +104,8 @@ gap: 32px;
   width: 100%;
   height: auto;
   box-shadow: 0px 0px 30px #030303;
+  object-fit: scale-down;
+  
 }
 
 /* Estilo para el formulario de contacto */
@@ -128,21 +132,73 @@ gap: 32px;
 }
 
 /* Estilo para los enlaces rápidos de redes sociales */
-.social-links {
-    text-align: center;
-    padding: 20px;
+ul1 {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.social-links a {
-    margin: 0 10px;
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 20px;
+.item a {
+  text-decoration: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #f0f9fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  border: 3px solid #f0f9fe;
+  overflow: hidden;
+}
+
+.item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 0;
+  scale: 1 0;
+  transform-origin: bottom;
+  transition: scale 0.5s ease;
+}
+
+.item:hover a::before {
+  scale: 1 1;
+}
+
+.icon {
+  font-size: 2rem;
+  color: hsl(203, 92%, 8%);
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.item a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.item:nth-child(1) {
+  --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+}
+.item:nth-child(2) {
+  --bg-color: #0077b5;
+}
+.item:nth-child(3) {
+  --bg-color: #ff0000;
+}
+.item:nth-child(4) {
+  --bg-color: #000;
 }
 
 /* Estilo para la información legal */
 .legal {
-    background-color: #333;
+    background-color: #854422;
     color: white;
     padding: 10px;
     text-align: center;
@@ -174,7 +230,7 @@ body{
 }
 
 :root{
-  --color-1: #673ab7;
+  --color-1: #000000;
 }
 
 body{
@@ -191,6 +247,8 @@ a{
 	text-decoration: none;
 }
 ul{
+  margin: 0;
+    padding: 0;
 	list-style: none;
 }
 .container{
@@ -290,7 +348,8 @@ img {
 .nav-toggler span::after{
 	top: 6px;
 }
-@media(max-width: 991px){
+
+@media(max-width: 900px){
     .nav-toggler{
     	display: flex;
     }
@@ -749,3 +808,34 @@ section {
   }
   
 /* ACA TERMINA CARROUSEL */
+
+.checked {
+  color: orange;
+}
+
+.inlineimage {
+  text-align:center; 
+  width:100%;
+  display:block;
+  margin:auto;
+}
+
+#flex{
+  margin: auto;
+  display: flex;
+  margin-left: 35%;
+  align-items: flex-end;
+  transform: translate(-100px); /* Make this half the image width */ 
+}
+
+#image{
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  margin-right: 20px;
+}
+
+.containerp {
+  margin-left: 10px;
+  padding-left: 100px;
+}
