@@ -222,7 +222,6 @@ ul1 {
 .item:nth-child(4) {
   --bg-color: #000;
 }
-
 /* Estilo para la información legal */
 .legal {
   background-color: #854422;
