@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Productos - Tienda de Motos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/LogoF.png" alt="LOGO">
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#acerca">Acerca de</a></li>
+                <li><a href="index.html#Servicios">Servicios</a></li>
+                <li><a href="index.html#gallery">Portafolio</a></li>
+                <li><a href="index.html#testimonials">Testimonios</a></li>
+                <li><a href="index.html#contact" class="cta-header">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Venta de Productos</h1>
+        <form class="form-grid" onsubmit="registrarVenta(event)">
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <select id="cliente" name="cliente" required>
+                    <option value="">Seleccione un cliente</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto" required onchange="mostrarImagen()">
+                    <option value="">Seleccione un producto</option>        
+                </select>
+            </div>
+            <div id="imagenProducto" class="imagen-producto-container"></div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="precio_unitario">Precio unitario:</label>
+                <input type="number" id="precio_unitario" name="precio_unitario" step="0.01" readonly required>
+            </div>
+            <div class="form-group">
+                <label for="total">Total:</label>
+                <input type="number" id="total" name="total" step="0.01" readonly>
+            </div>
+            <div class="form-group">
+                <label for="metodo_pago">Método de pago:</label>
+                <select id="metodo_pago" name="metodo_pago" required>
+                    <option value="">Seleccione un método</option>                    
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                    <option value="transferencia">Transferencia bancaria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha_venta">Fecha de venta:</label>
+                <input type="date" id="fecha_venta" name="fecha_venta" required>
+            </div>
+            <div class="form-group">
+                <label for="notas">Notas adicionales:</label>
+                <textarea id="notas" name="notas" rows="3"></textarea>
+            </div>
+            <button type="submit" class="fill">Registrar Venta</button>
+        </form>
+        <h3>Ventas registradas:</h3>
+        <div id="VentasList"></div>
+    </div>
+    <script src="scripts/vP.js"></script>
+</body>
+</html>
+

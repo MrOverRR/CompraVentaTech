@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pedidos - Tienda de Motos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/LogoF.png" alt="LOGO">
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#acerca">Acerca de</a></li>
+                <li><a href="index.html#Servicios">Servicios</a></li>
+                <li><a href="index.html#gallery">Portafolio</a></li>
+                <li><a href="index.html#testimonials">Testimonios</a></li>
+                <li><a href="index.html#contact" class="cta-header">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Registro de Pedidos</h1>
+        <form id="pedidoForm" class="form-grid">
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_pedido">Tipo de pedido:</label>
+                <select id="tipo_pedido" name="tipo_pedido" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="moto">Moto</option>
+                    <option value="accesorio">Accesorio</option>
+                    <option value="lujo">Lujo</option>
+                    <option value="servicio">Servicio técnico</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto/Servicio:</label>
+                <input type="text" id="producto" name="producto" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_pedido">Fecha de pedido:</label>
+                <input type="date" id="fecha_pedido" name="fecha_pedido" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_entrega">Fecha estimada de entrega:</label>
+                <input type="date" id="fecha_entrega" name="fecha_entrega" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado del pedido:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="en_proceso">En proceso</option>
+                    <option value="enviado">Enviado</option>
+                    <option value="entregado">Entregado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="direccion_entrega">Dirección de entrega:</label>
+                <input type="text" id="direccion_entrega" name="direccion_entrega" required>
+            </div>
+            <div class="form-group">
+                <label for="notas">Notas adicionales:</label>
+                <textarea id="notas" name="notas" rows="3"></textarea>
+            </div>
+            <button type="submit">Registrar Pedido</button>
+        </form>
+        <h2>Pedidos Registrados</h2>
+        <div id="pedidosRegistrados"></div>
+    </div>
+    <script src="scripts/rPedidos.js"></script>
+</body>
+</html>

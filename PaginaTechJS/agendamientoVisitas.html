@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamiento de Visitas - Tienda de Motos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/LogoF.png" alt="LOGO">
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html#acerca">Acerca de</a></li>
+                        <li><a href="index.html#Servicios">Servicios</a></li>
+                        <li><a href="index.html#gallery">Portafolio</a></li>
+                        <li><a href="index.html#testimonials">Testimonios</a></li>
+                        <li><a href="index.html#contact" class="cta-header">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Agendamiento de Visitas</h1>
+        <form id="visitaForm" class="form-grid">
+            <div class="form-group">
+                <label for="cliente">Nombre del cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_visita">Tipo de visita:</label>
+                <select id="tipo_visita" name="tipo_visita" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="prueba_manejo">Prueba de manejo</option>
+                    <option value="servicio_tecnico">Servicio técnico</option>
+                    <option value="consulta">Consulta de productos</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha_visita">Fecha de visita:</label>
+                <input type="date" id="fecha_visita" name="fecha_visita" required>
+            </div>
+            <div class="form-group">
+                <label for="hora_visita">Hora de visita:</label>
+                <input type="time" id="hora_visita" name="hora_visita" required>
+            </div>
+            <div class="form-group">
+                <label for="motivo">Motivo de la visita:</label>
+                <textarea id="motivo" name="motivo" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="preferencias">Preferencias o requerimientos especiales:</label>
+                <textarea id="preferencias" name="preferencias" rows="3"></textarea>
+            </div>
+            <button type="submit">Agendar Visita</button>
+        </form>
+        <h2>Visitas Agendadas</h2>
+        <div id="visitasAgendadas"></div>
+    </div>
+    <script src="scripts/rVs.js"></script>
+</body>
+</html>

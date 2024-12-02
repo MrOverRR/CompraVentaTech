@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes - Tienda de Motos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/LogoF.png" alt="LOGO">
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html#acerca">Acerca de</a></li>
+                        <li><a href="index.html#Servicios">Servicios</a></li>
+                        <li><a href="index.html#gallery">Portafolio</a></li>
+                        <li><a href="index.html#testimonials">Testimonios</a></li>
+                        <li><a href="index.html#contact" class="cta-header">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Registro de Clientes</h1>
+        <form class="form-grid" onsubmit="agregarCliente(event)">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_cliente">Tipo de cliente:</label>
+                <select id="tipo_cliente" name="tipo_cliente" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="comprador">Comprador</option>
+                    <option value="vendedor">Vendedor</option>
+                    <option value="ambos">Ambos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interes">Interés principal:</label>
+                <select id="interes" name="interes" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="motos">Motos</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="lujos">Lujos</option>
+                    <option value="servicios">Servicios técnicos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comentarios">Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Foto del Cliente:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+            </div>
+            <button type="submit">Registrar Cliente</button>
+        </form>
+        <div id="ClientesList"></div>
+    </div>
+    <script src="scripts/rC.js"></script>
+</body>
+</html>
+

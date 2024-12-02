@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Quejas - Tienda de Motos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/LogoF.png" alt="LOGO">
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html#acerca">Acerca de</a></li>
+                        <li><a href="index.html#Servicios">Servicios</a></li>
+                        <li><a href="index.html#gallery">Portafolio</a></li>
+                        <li><a href="index.html#testimonials">Testimonios</a></li>
+                        <li><a href="index.html#contact" class="cta-header">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Registro de Quejas</h1>
+        <form id="quejaForm" class="form-grid">
+            <div class="form-group">
+                <label for="cliente">Nombre del cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_queja">Tipo de queja:</label>
+                <select id="tipo_queja" name="tipo_queja" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="producto">Producto defectuoso</option>
+                    <option value="servicio">Mal servicio</option>
+                    <option value="entrega">Problema de entrega</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto o servicio relacionado:</label>
+                <input type="text" id="producto" name="producto" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_incidente">Fecha del incidente:</label>
+                <input type="date" id="fecha_incidente" name="fecha_incidente" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción de la queja:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="solucion_propuesta">Solución propuesta:</label>
+                <textarea id="solucion_propuesta" name="solucion_propuesta" rows="3"></textarea>
+            </div>
+            <button type="submit">Registrar Queja</button>
+        </form>
+        <h2>Quejas Registradas</h2>
+        <div id="quejasRegistradas"></div>
+    </div>
+    <script src="scripts/rQs.js"></script>
+</body>
+</html>

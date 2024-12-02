@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Productos - Tienda de Motos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<div class="main-content">
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/LogoF.png" alt="LOGO">
+            </a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#acerca">Acerca de</a></li>
+                <li><a href="index.html#Servicios">Servicios</a></li>
+                <li><a href="index.html#gallery">Portafolio</a></li>
+                <li><a href="index.html#testimonials">Testimonios</a></li>
+                <li><a href="index.html#contact" class="cta-header">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+</div>
+<body> 
+    <div class="container">
+        <h1>Registro de Productos</h1>
+        <form class="form-grid" id="fproducto" onsubmit="agregarProducto(event)">
+            <div class="form-group">
+                <label for="tipo_producto">Tipo de producto:</label>
+                <select id="tipo_producto" name="tipo_producto" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="moto">Moto</option>
+                    <option value="accesorio">Accesorio</option>
+                    <option value="lujo">Lujo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre del producto:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+            </div>
+            <div class="form-group">
+                <label for="anio">Año (si aplica):</label>
+                <input type="number" id="anio" name="anio" min="1900" max="2099">
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad en stock:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Imagen del producto:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+            </div>
+            <button type="submit">Registrar Producto</button>
+        </form>
+        <h3>Productos almacenados:</h3>
+        <div id="ProductosList"></div>    
+    </div>
+    <script src="scripts/rPr.js"></script>
+</body>
+</html>
